@@ -177,7 +177,7 @@ header {
     transform: rotate(-45deg);
 }
 
-@media (max-width: 940px) {
+@media (max-width: 980px) {
     .menu-button-container {
         display: flex;
     }
@@ -256,17 +256,32 @@ h2 {
     transition: all .25s ease-in-out;
 }
 
-.grid-item:hover img {
-    filter: brightness(110%);
-}
-
 .grid-image {
     z-index: 1;
     width: 100%;
     border-radius: 2px;
     transition: all .25s ease-in-out;
+    filter: brightness(98%);
+    transition: 0.5s;
 }
 
-.grid-text {
-    text-align: center;
+.grid-item:hover img {
+    filter: brightness(110%);
+    transform: scale(1.015);
+    transition: 0.5s;
+}
+
+.quotes-block {
+    width: 50%;
+    margin: auto;
+}
+
+.quote-block {
+    font-size: 22px;
+    padding: 30px;
+    border-top: 3px double #0000007f;
+}
+
+.quote {
+    margin-bottom: 10px;
 }
