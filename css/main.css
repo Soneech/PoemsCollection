@@ -3,6 +3,8 @@
     --base-background-color: #fcf5ed;
     --base-text-color-hover: #787878;
     --elements-color: #555555;
+    --header-height: 100px;
+    --footer-height: 100px;
 }
 
 * {
@@ -36,12 +38,13 @@ header {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 95px;
+    height: var(--header-height);
     position: fixed;
     top: 0px;
     left: 0px;
     background-color: var(--base-background-color);
     font-size: 24px;
+    z-index: 5;
 }
 
 .header-content {
@@ -69,6 +72,15 @@ header {
     cursor: pointer;
     margin: 10px;
     font-size: 32px;
+}
+
+.start-image {
+    object-fit: cover;
+    width: 100%;
+    height: 550px;
+    filter: contrast(110%);
+    filter: hue-rotate(10deg);
+    z-index: 1;
 }
 
 .menu {
@@ -153,7 +165,7 @@ header {
     .menu {
         position: absolute;
         top: 0;
-        margin-top: 95px;
+        margin-top: var(--header-height);
         left: 0;
         flex-direction: column;
         width: 100%;
@@ -188,6 +200,6 @@ footer {
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	height: 90px;
+	height: var(--footer-height);
     background-color: var(--base-background-color);
 }
