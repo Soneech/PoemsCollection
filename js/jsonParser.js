@@ -1,17 +1,3 @@
-function readTextFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-        }
-    }
-    rawFile.send(null);
-}
-
-
-readTextFile("https://my-json-server.typicode.com/Soneech/PoemCollection/db", function(text){
-    var data = JSON.parse(text);
-    console.log(data);
-});
+fetch('https://my-json-server.typicode.com/Soneech/PoemData/db')
+    .then(response => response.json())
+    .then(json => console.log(json))
