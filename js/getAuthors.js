@@ -5,7 +5,8 @@ function onLoad() {
 
 var period = onLoad();
 
-var url = "https://my-json-server.typicode.com/Soneech/PoemData/" + period;
+//var url = "https://my-json-server.typicode.com/Soneech/PoemData/" + period;
+var url = "https://api.jsonbin.io/v3/b/637fc8650e6a79321e54a776/latest";
 var authorsList = document.querySelector(".authors-list");
 
 var description = document.querySelector(".description");
@@ -30,6 +31,7 @@ function setDescription(period) {
 async function getPromise(url, callback) {
     let response = await fetch(url);
     let json = await response.json();
+    json = json.record[period];
     callback(json);
 }
 

@@ -5,11 +5,12 @@ function onLoad() {
 }
 
 const [id, period] = onLoad();
-var url = "https://my-json-server.typicode.com/Soneech/PoemData/" + period + "/" + id;
+var url = "https://api.jsonbin.io/v3/b/637fc8650e6a79321e54a776/latest";
 
 async function getPromise(url, callback) {
     let response = await fetch(url);
     let json = await response.json();
+    json = json.record[period][id];
     callback(json);
 }
 
@@ -27,7 +28,7 @@ getPromise(url, function(json) {
         pElemName.classList.add("poem-name");
         pElemName.textContent = poems[i].name;
 
-        let pElemPoem = document.createElement("p");
+        let pElemPoem = document.createElement("pre");
         pElemPoem.classList.add("poem");
         pElemPoem.textContent = poems[i].poem;
 
