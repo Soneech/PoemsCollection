@@ -48,7 +48,9 @@ header {
 .header-content {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    width: 85%;
+    margin: auto;
+    justify-content: space-between;
 }
 
 .logo-block {
