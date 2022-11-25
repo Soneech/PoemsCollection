@@ -28,8 +28,8 @@ body {
 }
 
 .main {
-    padding-top: var(--footer-height);
-    padding-bottom: calc(var(--footer-height) * 1.7);
+    padding-top: var(--header-height);
+    padding-bottom: calc(var(--footer-height) * 1.4);
 }
 
 header {
@@ -108,7 +108,7 @@ h2 {
     flex-direction: column;
     font-size: 26px;
     text-align: center;
-    width: 70%;
+    width: 75%;
     margin: auto;
     padding: 20px;
 }
@@ -130,4 +130,8 @@ h2 {
 .author-block:hover {
     transition: 1s;
     filter: brightness(100%);
+}
+
+.author-block:last-child {
+    filter: brightness(110%);
 }

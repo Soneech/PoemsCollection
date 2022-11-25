@@ -90,38 +90,80 @@ footer {
     background-color: var(--base-background-color);
 }
 
-h2 {
-    margin-top: 60px;
-    margin-bottom: 60px;
-    text-align: center;
+.author-block {
+    margin-bottom: 45px;
 }
 
-.text {
-    margin-left: 120px;
-    margin-right: 120px;
+.avatar {
+    float: left;
+    border-radius: 3px;
+    border: 1px solid grey;
+    padding: 6px;
+    margin-right: 30px;
+}
+
+.image-block {
+    display: inline;
+    width: 75%;
+    margin-top: 25px;
+}
+
+.name {
+    font-size: 30px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.author-description {
     font-size: 24px;
-    text-align: center;
 }
 
-.authors-list {
+.poems-block {
     display: flex;
     flex-direction: column;
-    font-size: 26px;
-    text-align: center;
-    width: 70%;
+    width: 85%;
     margin: auto;
-    padding: 20px;
 }
 
-.author-block {
-    
+.poems-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 4px double grey;
+    border-bottom: 4px double grey;
 }
 
-.author-block:nth-child(even) {
-    width: 70%;
+.poem-block {
+    margin: auto;
+    width: 500px;
+    margin-top: 30px;
+    padding-bottom: 30px;
 }
 
-.author-block:hover {
-    transition: 1s;
-    filter: brightness(100%);
+.poem-block:not(:last-child) {
+    border-bottom: 4px double grey;
+}
+
+.poem {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+.poem-name {
+    margin-bottom: 25px;
+}
+
+@media (max-width: 395px) {
+    .avatar {
+        width: 300px;
+    }
+}
+
+@media (max-width: 355px) {
+    .avatar {
+        width: 250px;
+    }
 }

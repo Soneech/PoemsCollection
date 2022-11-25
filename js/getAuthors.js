@@ -5,23 +5,26 @@ function onLoad() {
 
 var period = onLoad();
 
-//var url = "https://my-json-server.typicode.com/Soneech/PoemData/" + period;
 var url = "https://api.jsonbin.io/v3/b/637fc8650e6a79321e54a776/latest";
 var authorsList = document.querySelector(".authors-list");
 
 var description = document.querySelector(".description");
+var mainText = document.querySelector(".main-text");
 setDescription(period);
 
 function setDescription(period) {
     switch(period) {
         case "eighteenthCentury":
             description.textContent = "Поэты 18-го века";
+            mainText.textContent = "Список поэтов 18-го века";
             break;
         case "goldenPeriod":
             description.textContent = "Поэты Золотого века";
+            mainText.textContent = "Список поэтов Золотого века";
             break;
         case "silverPeriod":
             description.textContent = "Поэты Серебряного века";
+            mainText.textContent = "Список поэтов Серебряного века";
             break;
         default:
             break;
@@ -36,10 +39,12 @@ async function getPromise(url, callback) {
 }
 
 getPromise(url, function(json) {
-    for (let i = 0; i < json.length; i++) {
+    for (let i = 0; i <= json.length; i++) {
         let pElem = document.createElement("p");
-        pElem.textContent = json[i].name;
 
+        if (i != json.length)
+            pElem.textContent = json[i].name;
+        
         let aElem = document.createElement("a");
         aElem.classList.add("author");
         aElem.appendChild(pElem);
@@ -48,8 +53,9 @@ getPromise(url, function(json) {
         divElem.classList.add("author-block");
         divElem.appendChild(aElem);
 
+        if (i != json.length)
+            divElem.addEventListener('click', openPoemsPage.bind(null, period, json[i].id));
         authorsList.appendChild(divElem);
-        divElem.addEventListener('click', openPoemsPage.bind(null, period, json[i].id));
     }
 });
 

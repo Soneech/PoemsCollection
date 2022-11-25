@@ -15,6 +15,7 @@ async function getPromise(url, callback) {
 }
 
 var nameElem = document.querySelector(".name");
+var desctiprionElem = document.querySelector(".author-description");
 var avatar = document.querySelector(".avatar");
 var poemsList = document.querySelector(".poems-list");
 
@@ -22,9 +23,15 @@ getPromise(url, function(json) {
     var name = json.name;
     nameElem.textContent = name;
 
+    var imageSrc = json.image;
+    avatar.src = imageSrc;
+
+    var description = json.description;
+    desctiprionElem.textContent = description;
+
     var poems = json.poems;
     for (let i = 0; i < poems.length; i++) {
-        let pElemName = document.createElement("p");
+        let pElemName = document.createElement("h3");
         pElemName.classList.add("poem-name");
         pElemName.textContent = poems[i].name;
 
