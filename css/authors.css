@@ -120,6 +120,7 @@ h2 {
     margin: auto;
     background: linear-gradient(to left, white, #e6e6e6, white);
     filter: brightness(110%);
+    cursor: pointer;
     transition: 1s;
 }
 
