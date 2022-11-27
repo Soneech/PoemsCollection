@@ -8,22 +8,18 @@ var period = onLoad();
 var url = "https://api.jsonbin.io/v3/b/637fc8650e6a79321e54a776/latest";
 var authorsList = document.querySelector(".authors-list");
 
-var description = document.querySelector(".description");
 var mainText = document.querySelector(".main-text");
 setDescription(period);
 
 function setDescription(period) {
     switch(period) {
         case "eighteenthCentury":
-            description.textContent = "Поэты 18-го века";
             mainText.textContent = "Список поэтов 18-го века";
             break;
         case "goldenPeriod":
-            description.textContent = "Поэты Золотого века";
             mainText.textContent = "Список поэтов Золотого века";
             break;
         case "silverPeriod":
-            description.textContent = "Поэты Серебряного века";
             mainText.textContent = "Список поэтов Серебряного века";
             break;
         default:

@@ -8,8 +8,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-document.querySelector('a[href="#top"]').addEventListener('click', function(e) {
-    window.scrollTo({ 
-        top: 0, behavior: 'smooth' 
+try {
+    document.querySelector('a[href="#top"]').addEventListener('click', function(e) {
+        window.scrollTo({ 
+            top: 0, behavior: 'smooth' 
+        });
     });
-});
+} catch {};
