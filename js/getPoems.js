@@ -25,6 +25,7 @@ getPromise(url, function(json) {
 
     var imageSrc = json.image;
     avatar.src = imageSrc;
+    avatar.alt = "Тут должно было быть изображение автора, но что-то пошло не так...";
 
     var description = json.description;
     desctiprionElem.textContent = description;
