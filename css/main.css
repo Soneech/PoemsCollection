@@ -166,6 +166,10 @@ footer {
     .poem-block {
         width: 430px;
     }
+
+    .quotes-block {
+        width: 75%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -182,7 +186,7 @@ footer {
         font-size: 20px;
     }
 
-    .poem, .contacts-text, .text, p {
+    .poem, .contacts-text, .text, p, .menu {
         font-size: 20px;
     }
 
