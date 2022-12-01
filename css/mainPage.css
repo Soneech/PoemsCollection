@@ -281,3 +281,6 @@ h2 {
     transition: 1.5s;
 }
 
+.author {
+    cursor: pointer;
+}
