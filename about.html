@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="icons/main.png"/>
-        <link rel="stylesheet" href="css/authors.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/about.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,9 +13,9 @@
 
         <title>Сборник стихов</title>
     </head>
-
-    <body onload="onLoad()">
+    <body>
         <a id="top"></a>
+
         <div class="wrapper">
             <header class="main-elements">
                 <div class="header-content">
@@ -28,11 +28,6 @@
                             height="70">
                         <a class="logo-text" href="index.html"><p>Сборник стихов</p></a>
                     </div>
-                    
-                    <div class="contacts main-elements">
-                        <a href="about.html" class="contacts-text"><p>О проекте</p></a>
-                    </div>
-
                 </div>
             </header>
 
@@ -40,9 +35,21 @@
             <script src="js/scrollTopButton.js"></script>
 
             <div class="main main-elements">
-                <h2 class="main-text"></h2>
-                <div class="authors-list">
-                    
+                <div class="about-image-block main-elements">
+                    <img
+                        class="about-image"
+                        src="img/about-image.png">
+                    <p class="about-text">В данном разделе представлена основная информация о проекте и разработчике</p>
+                </div>
+
+                <div class="project-info">
+                    <h2>О проекте</h2>
+                    <p class="text">Данный проект создан с целью...</p>
+                </div>
+
+                <div class="dev-info">
+                    <h2>О разработчике</h2>
+                    <p class="text"></p>
                 </div>
             </div>
 
@@ -70,8 +77,6 @@
                     </button>
                 </div>
             </footer>
-        </div> 
+        </div>
     </body>
-    <script src="js/getAuthors.js"></script>
-    <script src="js/scroll.js"></script>
 </html>

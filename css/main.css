@@ -100,6 +100,19 @@ header {
     font-size: 32px;
 }
 
+h2 {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.text {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 24px;
+    text-align: center;
+}
+
 
 footer {
     display: grid;
@@ -187,7 +200,13 @@ footer {
         font-size: 20px;
     }
 
-    .poem, .contacts-text, .text, .text1, p, .menu {
+    .poem, 
+    .contacts-text, 
+    .text, 
+    .text1, p, 
+    .menu, 
+    .start-text, 
+    .about-text {
         font-size: 20px;
     }
 

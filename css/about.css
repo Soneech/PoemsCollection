@@ -1,0 +1,39 @@
+.main-elements {
+    --base-shadow: 0px 0px 15px 1px #c1c1c169;
+    --base-background-color: #fcf5ed;
+    --base-text-color-hover: #787878;
+    --elements-color: #555555;
+    --header-height: 100px;
+    --footer-height: 150px;
+}
+
+.about-image-block {
+    margin-top: var(--header-height);
+    height: 540px;
+}
+
+.about-image {
+    object-fit: cover;
+    width: 100%;
+    height: 530px;
+    filter: contrast(110%);
+    filter: hue-rotate(10deg);
+    z-index: 1;
+}
+
+.about-text {
+    font-size: 24px;
+    position: relative;
+    bottom: 120px;
+    text-align: center;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-shadow: 10px 0px 25px white;
+    transition: 1s;
+}
+
+.about-text:hover {
+    font-size: 25px;
+    transition: 1s;
+}

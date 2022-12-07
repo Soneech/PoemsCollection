@@ -1,0 +1,63 @@
+
+
+.start-image-block {
+    margin-top: var(--header-height);
+    height: 540px;
+}
+
+.start-image {
+    object-fit: cover;
+    width: 100%;
+    height: 530px;
+    filter: contrast(110%);
+    filter: hue-rotate(10deg);
+    z-index: 1;
+}
+
+.start-text {
+    font-size: 24px;
+    position: relative;
+    bottom: 120px;
+    text-align: center;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-shadow: 10px 0px 25px white;
+    transition: 1s;
+}
+
+.start-text:hover {
+    font-size: 25px;
+    transition: 1s;
+}
+
+.poems-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 4px double grey;
+    border-bottom: 4px double grey;
+}
+
+.poem-block {
+    margin: auto;
+    width: 500px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+.poem-block:not(:last-child) {
+    border-bottom: 4px double grey;
+}
+
+.poem {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+.poem-name {
+    margin-bottom: 25px;
+}

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="icons/main.png"/>
-        <link rel="stylesheet" href="css/authors.css">
+        <link rel="stylesheet" href="css/poemsBase.css">
         <link rel="stylesheet" href="css/main.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,8 +14,9 @@
         <title>Сборник стихов</title>
     </head>
 
-    <body onload="onLoad()">
+    <body>
         <a id="top"></a>
+
         <div class="wrapper">
             <header class="main-elements">
                 <div class="header-content">
@@ -28,21 +29,34 @@
                             height="70">
                         <a class="logo-text" href="index.html"><p>Сборник стихов</p></a>
                     </div>
-                    
+
                     <div class="contacts main-elements">
                         <a href="about.html" class="contacts-text"><p>О проекте</p></a>
                     </div>
-
                 </div>
+
+                
             </header>
 
             <button class="go-top main-elements">▲</button>
             <script src="js/scrollTopButton.js"></script>
 
             <div class="main main-elements">
-                <h2 class="main-text"></h2>
-                <div class="authors-list">
-                    
+                <div class="start-image-block main-elements">
+                    <img
+                        class="start-image"
+                        src="img/start-base-image.jpg">
+                    <p class="start-text">В данном разделе представлена база всех доступных стихотворений</p>
+                </div>
+
+                <div class="poems-block">
+                    <!--
+                    <div class="poem-block">
+                        <h3 class="poem-name"></h3>
+                        <pre class="poem"></pre>
+                        <h4 class="author-name"></h4>
+                    </div>
+                    -->
                 </div>
             </div>
 
@@ -70,8 +84,7 @@
                     </button>
                 </div>
             </footer>
-        </div> 
+        </div>
+        <script src="js/getAll.js"></script>
     </body>
-    <script src="js/getAuthors.js"></script>
-    <script src="js/scroll.js"></script>
 </html>
