@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="icons/main.png"/>
+        <link rel="stylesheet" href="css/poem.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/about.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +13,7 @@
 
         <title>Сборник стихов</title>
     </head>
+
     <body>
         <a id="top"></a>
 
@@ -28,6 +29,10 @@
                             height="70">
                         <a class="logo-text" href="index.html"><p>Сборник стихов</p></a>
                     </div>
+
+                    <div class="contacts main-elements">
+                        <a href="about.html" class="contacts-text"><p>О проекте</p></a>
+                    </div>
                 </div>
             </header>
 
@@ -35,39 +40,12 @@
             <script src="js/scrollTopButton.js"></script>
 
             <div class="main main-elements">
-                <div class="about-image-block main-elements">
-                    <img
-                        class="about-image"
-                        src="img/about-image.png">
-                    <p class="about-text">В данном разделе представлена основная информация о проекте и разработчике</p>
-                </div>
-
-                <div class="project-info">
-                    <h2>О проекте</h2>
-                    <p class="text">
-                        Данный сайт создан для тех, кому интересна отечественная поэзия. 
-                        Каким бы ни было ваше настроение, здесь Вы найдёте то, что придется Вам по вкусу в данный момент.
-                    </p>
-                </div>
-
-                <div class="dev-info">
-                    <h2>О разработчике</h2>
-                    <p class="text">
-                        Студентка 2-го курса МИРЭА - Российского технологического университета.
-                        Учусь на направлении "Программная инженерия", профиль обучения: 
-                        "Разработка программных продуктов и проектирование информационных систем", 
-                        учебная группа: ИКБО-16-21.
-                    </p>
-
-                    <h2>Полезные ссылки</h2>
-                    <p class="text">
-                        Ниже представлена контактная информация для получения дополнительной информации.
-                    </p>
-                    <div class="links">
-                        <p>Телефон: <a href="tel:+79131358595" class="phone">+7 (913) 135-85-95</a></p>
-                        <p>Почта: <a href="mailto:sonya.patrina@yandex.ru">sonya.patrina@yandex.ru</a></p>
-                        <p>Также в конце страницы приведены ссылки на соцсети github.</p>
-                    </div>
+                <div class="poem-block">
+                    <!--
+                    <h3 class="poem-name"></h3>
+                    <pre class="poem"></pre>
+                    <h4 class="author-name"></h4>
+                    -->
                 </div>
             </div>
 
@@ -96,5 +74,6 @@
                 </div>
             </footer>
         </div>
+        <script src="js/getPoem.js"></script>
     </body>
 </html>

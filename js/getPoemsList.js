@@ -9,7 +9,7 @@ async function getPromise(url, callback) {
 }
 
 
-function createPageElems(authorName, poemName, poemText) {
+function createPageElems(authorId, authorName, poemName, poemId, period) {
     let divElem = document.createElement("div");
     divElem.classList.add("poem-block");
 
@@ -17,17 +17,16 @@ function createPageElems(authorName, poemName, poemText) {
     h3Elem.classList.add("poem-name");
     h3Elem.textContent = poemName;
 
-    let preElem = document.createElement("pre");
-    preElem.classList.add("poem");
-    preElem.textContent = poemText;
-
     let h4Elem = document.createElement("h4");
     h4Elem.classList.add("author-name");
     h4Elem.textContent = authorName;
 
     divElem.appendChild(h3Elem);
-    divElem.appendChild(preElem);
     divElem.appendChild(h4Elem);
+
+    divElem.addEventListener("click", function() {
+        window.location.href = "poem.html?period=" + period + "&author=" + authorId + "&poem=" + poemId;    
+    })
 
     poemsBlock.appendChild(divElem);
 }
@@ -35,15 +34,14 @@ function createPageElems(authorName, poemName, poemText) {
 getPromise(url, function(json) {
     for(let period in json) {
         let authors = json[period];
-        for (let author in authors) {
-           let authorName = authors[author].name;
+        for (let authorId in authors) {
+           let authorName = authors[authorId].name;
 
            if (authorName) {
-            let poems = authors[author].poems;
-            for (let poem in poems) {
-                let poemName = poems[poem].name;
-                let poemText = poems[poem].poem;
-                createPageElems(authorName, poemName, poemText);
+            let poems = authors[authorId].poems;
+            for (let poemId in poems) {
+                let poemName = poems[poemId].name;
+                createPageElems(authorId, authorName, poemName, poemId, period);
             }
            }
         }

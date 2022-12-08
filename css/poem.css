@@ -1,0 +1,40 @@
+.main-elements {
+    --base-shadow: 0px 0px 15px 1px #c1c1c169;
+    --base-background-color: #fcf5ed;
+    --base-text-color-hover: #787878;
+    --elements-color: #555555;
+    --header-height: 100px;
+    --footer-height: 150px;
+}
+
+.poem-block {
+    margin: auto;
+    width: 500px;
+    margin-top: 150px;
+}
+
+.poem {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+.poem-name {
+    margin-bottom: 25px;
+}
+
+.author-name {
+    margin-top: 30px;
+    font-style: italic;
+    margin-left: 40%;
+    cursor: pointer;
+    font-size: 22px;
+    transition: 1s;
+}
+
+.author-name:hover {
+    transition: 1s;
+    color: #686868;
+}
