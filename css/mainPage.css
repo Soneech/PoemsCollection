@@ -150,14 +150,14 @@
     }
 }
 
-.grid-container {
+.multicol-container {
     columns: 4 290px;
     column-gap: 1.5rem;
     width: 84%;
     margin: 0 auto;
 }
 
-.grid-item {    
+.col-item {    
     width: 150px;
     margin: 0 1.5rem 1.5rem 0;
     display: inline-block;
@@ -169,7 +169,7 @@
     transition: all .25s ease-in-out;
 }
 
-.grid-image {
+.col-image {
     z-index: 1;
     width: 100%;
     border-radius: 2px;
@@ -178,13 +178,13 @@
     transition: 0.5s;
 }
 
-.grid-item:hover img {
+.col-item:hover img {
     filter: brightness(110%);
     transform: scale(1.015);
     transition: 0.5s;
 }
 
-.grid-text {
+.col-text {
     text-align: center;
 }
 

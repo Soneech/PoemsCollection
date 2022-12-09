@@ -1,6 +1,6 @@
 var url = "https://api.jsonbin.io/v3/b/637fc8650e6a79321e54a776/latest";
 
-var container = document.querySelector(".grid-container");
+var container = document.querySelector(".multicol-container");
 var quotesBlock = document.querySelector(".quotes-block");
 
 async function getPromise(url, callback) {
@@ -23,14 +23,14 @@ getPromise(url, function(json) {
 
         let imgElem = document.createElement("img");
         imgElem.src = imageSrc;
-        imgElem.classList.add("grid-image");
+        imgElem.classList.add("col-image");
 
         let pElem = document.createElement("p");
         pElem.textContent = name;
-        pElem.classList.add("grid-text");
+        pElem.classList.add("col-text");
 
         let divElem = document.createElement("div");
-        divElem.classList.add("grid-item");
+        divElem.classList.add("col-item");
 
         divElem.appendChild(imgElem);
         divElem.appendChild(pElem);
